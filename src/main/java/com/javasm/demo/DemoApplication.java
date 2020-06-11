@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("com.javasm.*.dao")
 /*开启事务管理*/
 @EnableTransactionManagement
+
+
 @SpringBootApplication
 /*打war包，修改启动类*/
 public class DemoApplication/* extends SpringBootServletInitializer*/ {
