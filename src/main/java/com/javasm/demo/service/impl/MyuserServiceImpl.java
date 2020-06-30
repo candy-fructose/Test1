@@ -1,4 +1,4 @@
-package com.javasm.demo.service.serviceImpl;
+package com.javasm.demo.service.impl;
 
 import com.javasm.demo.dao.MyuserMapper;
 import com.javasm.demo.entity.Myuser;

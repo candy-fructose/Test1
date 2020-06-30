@@ -1,6 +1,7 @@
 package com.javasm.demo;
 
 import com.alibaba.excel.EasyExcel;
+import com.javasm.demo.Util.UserExcelListener;
 import com.javasm.demo.entity.UserExcel;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
@@ -47,6 +48,17 @@ class DemoApplicationTests {
         String fileName="EasyTest1.xlsx";
         String filePath=PATH+fileName;
         EasyExcel.write(filePath,UserExcel.class).sheet("模板").doWrite(data());
+    }
+
+
+    @Test
+    void easyexcelread(){
+        String PATH="D:\\practice\\";
+        String fileName="EasyTest1.xlsx";
+        String filePath=PATH+fileName;
+        // 有个很重要的点 DemoDataListener 不能被spring管理，要每次读取excel都要new,然后里面用到spring可以构造方法传进去
+        // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
+        EasyExcel.read(filePath, UserExcel.class, new UserExcelListener()).sheet().doRead();
     }
 
 	@Test

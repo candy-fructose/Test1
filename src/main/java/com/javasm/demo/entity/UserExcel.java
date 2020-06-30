@@ -55,4 +55,14 @@ public class UserExcel {
     public void setLast_loginTime(Date last_loginTime) {
         this.last_loginTime = last_loginTime;
     }
+
+    @Override
+    public String toString() {
+        return "UserExcel{" +
+                "user_id=" + user_id +
+                ", user_name='" + user_name + '\'' +
+                ", user_age=" + user_age +
+                ", last_loginTime=" + last_loginTime +
+                '}';
+    }
 }

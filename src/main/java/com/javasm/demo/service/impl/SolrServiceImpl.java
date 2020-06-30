@@ -3,7 +3,7 @@
  * @Date:2020/6/5 10:42
  * @Description:
  */
-package com.javasm.demo.service.serviceImpl;
+package com.javasm.demo.service.impl;
 
 import com.javasm.demo.service.SolrService;
 import org.apache.solr.client.solrj.SolrClient;
